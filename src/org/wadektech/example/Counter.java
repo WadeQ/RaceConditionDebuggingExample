@@ -1,3 +1,5 @@
+package org.wadektech.example;
+
 public class Counter {
 
     private long count = 0 ;

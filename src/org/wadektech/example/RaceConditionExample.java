@@ -1,12 +1,14 @@
-public class RaceConditionExampleSolution {
+package org.wadektech.example;
 
-    private static Runnable getRunnable(CounterWithSynchronizedLock counter , String output) {
+public class RaceConditionExample {
+
+    private static Runnable getRunnable(Counter counter , String output) {
         return () -> {
             for (int i = 0 ; i < 1_000_000 ; i++){
-                counter.counterThenGet();
+               counter.counterThenGet();
             }
 
-            System.out.println(output + counter.getCount());
+              System.out.println(output + counter.getCount());
         } ;
 
     }
@@ -16,7 +18,7 @@ public class RaceConditionExampleSolution {
     }
 
     private static void executeCounter(){
-        CounterWithSynchronizedLock counter = new CounterWithSynchronizedLock() ;
+        Counter counter = new Counter() ;
 
         Thread threadOne = new Thread(getRunnable(counter , "Thread one count is: "));
         Thread threadTwo = new Thread(getRunnable(counter , "Thread two count is: "));

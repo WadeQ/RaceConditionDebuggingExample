@@ -1,3 +1,5 @@
+package org.wadektech.example;
+
 public class CounterWithSynchronizedLock {
 
     private long count = 0 ;
