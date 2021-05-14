@@ -14,10 +14,10 @@ public class RaceConditionExampleSolution {
     }
 
     public static void main(String[] args) {
-        executeCounter();
+        computeCounter();
     }
 
-    private static void executeCounter(){
+    private static void computeCounter(){
         CounterWithSynchronizedLock counter = new CounterWithSynchronizedLock() ;
 
         Thread threadOne = new Thread(getRunnable(counter , "Thread one count is: "));

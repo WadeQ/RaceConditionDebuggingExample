@@ -14,10 +14,10 @@ public class RaceConditionExample {
     }
 
     public static void main(String[] args) {
-        executeCounter();
+        computeCounter();
     }
 
-    private static void executeCounter(){
+    private static void computeCounter(){
         Counter counter = new Counter() ;
 
         Thread threadOne = new Thread(getRunnable(counter , "Thread one count is: "));
